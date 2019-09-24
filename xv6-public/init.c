@@ -20,7 +20,7 @@ main(void)
   dup(0);  // stderr
 
   for(;;){
-    printf(1, "init: starting sh\n");
+    printf(1, "Bienvenido guapeton sh\n");
     pid = fork();
     if(pid < 0){
       printf(1, "init: fork failed\n");
@@ -28,6 +28,9 @@ main(void)
     }
     if(pid == 0){
       exec("sh", argv);
+      //si pongo otro nombre que no existe como "cacahuate", aparece Bienvenito guapeton sh, exec: fail, y se vuelve a llamar
+      //y llamar hasta sin tener exito.
+      //Si le pongo un compando que si existe como "ls", este siempre se va a ejecutar, y ejecutar y ejecutar
       printf(1, "init: exec sh failed\n");
       exit();
     }

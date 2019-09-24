@@ -166,7 +166,7 @@ syscall(void)
 
   num = curproc->tf->eax;
   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
-      cprintf("%s -> %d\n",names[num],num+1);
+   //   cprintf("%s -> %d\n",names[num],num+1);
     curproc->tf->eax = syscalls[num]();
     //printf
   } else {
