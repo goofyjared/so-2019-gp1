@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//PRIMES JUAN JARED ABUD TRIANA A01228819
 int main() {
   int num = 0; //Variable global donde guardaremos cada numero escaneado
   int anterior = 0; //variable global donde guardaremos el primer numero escaneado
